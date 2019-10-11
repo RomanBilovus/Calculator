@@ -51,7 +51,7 @@ class Calculator {
       default:
         return;
     }
-    if (computation === Infinity) {
+    if (computation === Infinity || computation === -Infinity) {
       this.currentOperand = "";
       this.operation = undefined;
       this.previousOperand = "";
@@ -142,7 +142,3 @@ deleteButton.addEventListener("click", button => {
   calculator.delete();
   calculator.updateDisplay();
 });
-
-if (isFinite(this.currentOperand)) {
-  this.currentOperand = "Number is Infinity.";
-}
